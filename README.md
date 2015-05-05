@@ -8,7 +8,7 @@
 composer require vluzrmos/lumen-socketio
 ```
 
-Add on your Services Providers, <code>bootstrap/app.php</code>:
+Add the Services Providers, on <code>bootstrap/app.php</code>:
 ```php 
 $app->register('Vluzrmos\Socketio\SocketioServiceProvider');
 ```
