@@ -14,7 +14,7 @@ Install NodeJs dependencies:
 npm install --save express http-server redis ioredis socket.io
 ```
 
-Just create a nodejs file to your socket.io server, i will name it <code>socket.js</code>:
+Just create a nodejs file to your socket.io server, <code>socket.js</code>:
 
 ```javascript
 var app  = require('express');
