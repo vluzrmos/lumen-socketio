@@ -1,0 +1,25 @@
+{
+  "name": "vluzrmos/lumen-socketio",
+  "description": "The Laravel Lumen Socketio Broadcasting.",
+  "keywords": ["Lumen", "Laravel", "Socket.io", "Broadcasting", "WebSockets"],
+  "license": "DBAD",
+  "authors": [
+    {
+      "name": "Vagner do Carmo",
+      "email": "vluzrmos@gmail.com"
+    }
+  ],
+  "require": {
+    "laravel/support": "5.0.*",
+    "predis/predis": "~1.0",
+    "illuminate/redis": "~5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Vluzrmos\\": "src/"
+    },
+    "files":[
+      "src/Vluzrmos/Socketio/helpers.php"
+    ]
+  }
+}
