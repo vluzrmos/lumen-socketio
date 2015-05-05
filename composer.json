@@ -21,5 +21,7 @@
     "files":[
       "src/Vluzrmos/Socketio/helpers.php"
     ]
-  }
+  },
+  
+  "minimum-stability": "stable"
 }
