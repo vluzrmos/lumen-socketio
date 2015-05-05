@@ -1,4 +1,6 @@
 ## Lumen + Socket.io e Redis Broadcasting
+[![Latest Stable Version](https://poser.pugx.org/vluzrmos/lumen-socketio/v/stable)](https://packagist.org/packages/vluzrmos/lumen-socketio) [![Total Downloads](https://poser.pugx.org/vluzrmos/lumen-socketio/downloads)](https://packagist.org/packages/vluzrmos/lumen-socketio) [![Latest Unstable Version](https://poser.pugx.org/vluzrmos/lumen-socketio/v/unstable)](https://packagist.org/packages/vluzrmos/lumen-socketio) [![License](https://poser.pugx.org/vluzrmos/lumen-socketio/license)](https://packagist.org/packages/vluzrmos/lumen-socketio)
+
 
 ## Instalation
 
