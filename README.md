@@ -81,6 +81,12 @@ On your view, you have to use [socket.io.js](http://socket.io/download/)
 
 ## Usage
 
+Run your socket.io server:
+
+```bash
+node socket.js
+```
+
 On your Lumen App:
 ```php
 
@@ -90,4 +96,8 @@ publish('channel', 'awesome-event', ['message' => 'An message', 'user' => \App\U
 
 ```
 
+And finish, run your lumen app:
 
+```bash
+php artisan serve
+```
