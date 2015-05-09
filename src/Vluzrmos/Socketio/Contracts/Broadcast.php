@@ -1,6 +1,8 @@
 <?php
 
-if(!function_exists('publish')){
+namespace Vluzrmos\Socketio\Contracts;
+
+interface Broadcast{
 
     /**
      * Publish a message to a channel
@@ -9,8 +11,5 @@ if(!function_exists('publish')){
      * @param String|Array|Serializable $message the message
      * @return mixed
      */
-    function publish($channel, $event, $message)
-    {
-        return app('Vluzrmos\Socketio\Contracts\Broadcast')->publish($channel, $event, $message);
-    }
+    public function publish($channel, $event, $message);
 }
