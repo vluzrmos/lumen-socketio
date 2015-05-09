@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Vluzrmos\\": "src/"
+      "Vluzrmos\\": "src/Vluzrmos/"
     },
     "files":[
       "src/Vluzrmos/Socketio/helpers.php"
