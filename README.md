@@ -104,7 +104,7 @@ $app->get('/publish', function() {
 
 //or, in your controller or some else method (using Dependency Injection)
 
-public function publishSomethingAwesome(\Vluzrmos\Socketio\Broadcast $broadcast){
+public function publishSomethingAwesome(\Vluzrmos\Socketio\Contracts\Broadcast $broadcast){
     $broadcast->publish('channel', 'awesome-event', 'An message');
     
     // or just use the helper without inject \Vluzrmos\Socketio\Broadcast
