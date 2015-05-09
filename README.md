@@ -96,10 +96,21 @@ node socket.js
 
 On your Lumen App:
 ```php
+$app->get('/publish', function() {
+    publish('channel', 'awesome-event', 'An message');
+    publish('channel', 'awesome-event', ['message' => 'An message', 'user' => \App\User::first()]);
+});
 
-publish('channel', 'awesome-event', 'An message');
 
-publish('channel', 'awesome-event', ['message' => 'An message', 'user' => \App\User::first()]);
+//or, in your controller or some else method (using Dependency Injection)
+
+public function publishSomethingAwesome(\Vluzrmos\Socketio\Broadcast $broadcast){
+    $broadcast->publish('channel', 'awesome-event', 'An message');
+    
+    // or just use the helper without inject \Vluzrmos\Socketio\Broadcast
+    
+    publish('channel', 'awesome-event', 'An message');
+}
 
 ```
 
