@@ -1,6 +1,7 @@
 <?php
 
 namespace Vluzrmos\Socketio;
+use Illuminate\Contracts\Redis\Database as Redis;
 
 class Broadcast {
 
@@ -12,11 +13,7 @@ class Broadcast {
     /**
      * @param $redis
      */
-    public function __construct($redis = null){
-        if(!$redis){
-            $redis = app('redis');
-        }
-
+    public function __construct(Redis $redis){
         $this->redis = $redis;
     }
 
