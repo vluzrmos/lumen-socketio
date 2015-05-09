@@ -21,45 +21,10 @@ Install NodeJs dependencies:
 npm install --save express http-server redis ioredis socket.io
 ```
 
-Just create a nodejs file to your socket.io server, <code>socket.js</code>:
+Copy the file <code>vendor/vluzrmos/lumen-socketio/Vluzrmos/Socketio/socket.js</code> to your project root.
 
-```javascript
-var app  = require('express');
-var http = require('http').Server(app);
-var io   = require('socket.io')(http);
+> Modify it whatever you want, see the code: [socket.js](https://github.com/vluzrmos/lumen-socketio/blob/master/src/Vluzrmos/Socketio/socket.js)
 
-var Redis = require('ioredis');
-
-/*
- * Your Redis connection
- * @see https://www.npmjs.com/package/ioredis for more details
- */
-var redis = new Redis('redis://127.0.0.1:6379/0'); 
-
-/**
- * Your broadcasting channel
- */
-redis.subscribe('channel', function(err, count){
-
-});
-
-/*
- * Your broadcasting emitter
- */
-redis.on('message', function(channel, message){
-	message = JSON.parse(message);
-
-	io.emit(channel+':'+message.event, message.payload);
-});
-
-/*
- * http server listen 8080
- */
-http.listen(8080, function(){
-	console.log('Listen on 0.0.0.0:8080');
-});
-
-```
 > Obs.: Remember to install a [Redis Server](http://redis.io)
 
 On your view, you have to use [socket.io.js](http://socket.io/download/)
@@ -79,7 +44,7 @@ On your view, you have to use [socket.io.js](http://socket.io/download/)
         var socket = io('http://localhost:8080'); //Some host and port configured in socket.js
 
         socket.on('channel:awesome-event', function (data) {
-            console.log(data);
+            console.log(data); 
         });
     </script>
 </body>
@@ -91,6 +56,7 @@ On your view, you have to use [socket.io.js](http://socket.io/download/)
 Run your socket.io server:
 
 ```bash
+# that socket.js file is in your project root
 node socket.js
 ```
 
