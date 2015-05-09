@@ -107,7 +107,7 @@ $app->get('/publish', function() {
 public function publishSomethingAwesome(\Vluzrmos\Socketio\Contracts\Broadcast $broadcast){
     $broadcast->publish('channel', 'awesome-event', 'An message');
     
-    // or just use the helper without inject \Vluzrmos\Socketio\Broadcast
+    // or just use the helper without inject \Vluzrmos\Socketio\Contracts\Broadcast
     
     publish('channel', 'awesome-event', 'An message');
 }
