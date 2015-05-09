@@ -5,7 +5,7 @@
 .env.*.php
 .env.php
 .env
-
+/vendor
 
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
