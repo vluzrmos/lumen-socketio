@@ -10,9 +10,9 @@
     }
   ],
   "require": {
-    "predis/predis": "~1.0",
-    "illuminate/support": "5.0.*",
-    "illuminate/redis": "~5.0"
+    "predis/predis": "1.0.*",
+    "illuminate/support": "5.0.*|5.1.*",
+    "illuminate/redis": "5.0.*|5.1.*"
   },
   "autoload": {
     "psr-4": {
